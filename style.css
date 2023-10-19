@@ -1,0 +1,38 @@
+body{
+    text-align:center ;
+    background-size: cover;
+
+}
+img{
+    width: 250px;
+}
+#controles{
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    
+}
+#iniciar{
+    width: 50px;
+    height: 50px;
+    border-color: white;
+    border-width: 10px;
+    border-style:  groove;
+    border-radius: 15px;
+    filter: invert(100%);
+}
+#volumen,#flash{
+    color: white;
+}
+.cancion img{
+    width: 65px;
+    vertical-align: middle;
+}
+
+#playlist{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    color:white;
+    text-align: left;
+}

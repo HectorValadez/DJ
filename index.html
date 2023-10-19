@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malvavisco 👻</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body background="WOW (1).gif">
+
+    <h1>DJ Malvavisco</h1>
+    <h3>con las manos puedes modificar la velocidad de la cancion y subir el volumen o bajar</h3>
+    <div style="float: left;">
+        <img src="Erizo bonito.gif" alt="">
+        <h2 id="flash">velocidad:1x</h2>
+    </div>
+    <div style="float: right;">
+        <img src="Erizo bonito.gif" alt="">
+        <h2 id="volumen">volumen:50%</h2>
+    </div>
+    <div id="controles">
+        <img id="iniciar" onclick="fiesta()" src="play (2).png" ></img>
+
+    </div>
+    <div id="playlist" >
+        <div class="cancion" onclick="reproduccion(1)">
+            <img src="coldplay.jpg" alt="">
+            <b>Vida la vida    Coldplay   4:02   😺</b>
+        </div>
+        <div class="cancion" onclick="reproduccion(2)">
+            <img src="Maroon_5_-_Memories.png" alt="">
+            <b>Memories     Marron5   3:04  ...🤩</b>
+        </div> 
+        <div class="cancion" onclick="reproduccion(3)">
+            <img src="sugar.jpg" alt="">
+            <b>Moves Like Jagger     Marron5   3:33  👻</b>
+        </div> 
+        <div class="cancion" onclick="reproduccion(4)">
+            <img src="sugar.jpg" alt="" >
+            <b>Sugar     Marron5   4:24  😻</b>
+        </div>
+        <div class="cancion" onclick="reproduccion(5)">
+            <img src="payphone.jpg" alt="">
+            <b>Payphone     Marron5   3:56  😎</b>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
