@@ -36,3 +36,18 @@ img{
     color:white;
     text-align: left;
 }
+#duracion,#drs{
+    font-size: 25px;
+    color: white;
+}
+#barradeduracion{
+    width:500px;
+    height: 20px;
+    background:linear-gradient(90deg,red,purple,blue,rgb(3, 253, 66));
+    margin: 0 auto;
+}
+#F1{
+    width: 50%;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.397);
+}

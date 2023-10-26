@@ -9,11 +9,19 @@ var velocidad = 0
 function fiesta() {
     if (cancion.isPlaying()) {
         document.getElementById("iniciar").src = "play (2).png"
-        cancion.stop()
+        cancion.pause()
+
     } else {
         document.getElementById("iniciar").src = "pausa.png"
         cancion.play()
+        document.getElementById("duracion").innerHTML=minutos(cancion.duration())+" m"
     }
+}
+function minutos(tiempo) {
+    m=Math.floor(tiempo/60)
+    s=Math.round(tiempo%60)
+    fucion=(s<10)?":0":":"
+    return m+fucion+s
 }
 function preload() {
     cancion = loadSound("Maroon5_Memories.mp3")
@@ -29,7 +37,7 @@ function setup() {
     canvas = createCanvas(640, 480)
     poseNet = ml5.poseNet(video, listo)
     poseNet.on("pose", respuesta)
-
+    
 }
 function listo() {
     console.log("are you ready?")
@@ -54,6 +62,13 @@ function draw() {
         velocidad = Math.round(velocidad)
         document.getElementById("flash").innerHTML = velocidad + "x"
         cancion.rate(velocidad)
+    }
+    if (cancion.isPlaying()&&frameCount%60==0) {
+        redbull=cancion.duration()
+        mercedes=cancion.currentTime()
+        william=(mercedes/redbull)*100
+        document.getElementById("F1").style.width=william+"%"
+        document.getElementById("drs").innerHTML=minutos(mercedes)
     }
 }
 function respuesta(resultados) {
